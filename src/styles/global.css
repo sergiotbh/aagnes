@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Acumin";
+  src: url("../fonts/AcuminVariableConcept.otf");
+}
+
+@font-face {
+  font-family: "MrsEaves";
+  src: url("../fonts/MrsEavesXLSerOT-RegItalic.otf");
+}

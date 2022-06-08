@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/',
   siteMetadata: {
     title: `Aagnes`,
     siteUrl: `https://www.yourdomain.tld`
@@ -8,5 +9,18 @@ module.exports = {
     options: {
       "icon": "src/images/icon.png"
     }
-  }]
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'images',
+      path: `${__dirname}/src/images`,
+    },
+  },
+  'gatsby-plugin-postcss',
+  `gatsby-plugin-image`,
+  `gatsby-plugin-sharp`,
+  `gatsby-transformer-sharp`,
+
+  ]
 };
