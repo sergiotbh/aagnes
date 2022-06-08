@@ -143,7 +143,7 @@ const Sidebar = ({initialState}) => {
           </li> */}
         </ul>
       </div>
-      <ul className={`flex flex-col child:inline-flex transition-opacity duration-1000 ${initialState ? 'opacity-0' : 'opacity-100'}`}>
+      <ul className={`flex flex-col child:inline-flex transition-opacity duration-1000 ${initialState ? 'opacity-0' : 'opacity-100'} pb-24 md:pb-12`}>
         <li className="mt-1">
           <Link
             to="/about"
