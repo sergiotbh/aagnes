@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkaagnes=self.webpackChunkaagnes||[]).push([[678],{9854:function(n,e,u){u.r(e),u.d(e,{default:function(){return c}});var t=u(7294),r=u(6781),a=function(n){return function(n){if(null==n)throw new TypeError("Cannot destructure undefined")}(n),t.createElement("main",null)};a.Layout=r.Z;var c=a}}]);
+//# sourceMappingURL=component---src-pages-index-js-a39b72b9c2bcd0aa206f.js.map
