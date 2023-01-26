@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import VerticalLogoWhite from '../images/aagnes_vertical_logo_white.svg'
-import QrLink from '../images/aagnes_qr.svg'
+import QrLink from '../images/insta_qr.svg'
 import BackgroundImage from 'gatsby-background-image'
 import { graphql } from 'gatsby';
 
@@ -86,7 +86,7 @@ export const query = graphql`
         }
       }
     }
-    cardFile: file(relativePath: { eq: "business_card.jpg" }) {
+    cardFile: file(relativePath: { eq: "aagnes_card.jpg" }) {
       name
       publicURL
     }

@@ -2,15 +2,12 @@ import React from "react"
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 
-const IndexPage = ({data}) => {
+const IndexPage = ({}) => {
+
+
   return (
     <main>
-      {/* <Helmet>
-        <title>Aagnes</title>
-      </Helmet>
-      <HeroBanner
-        images={data.homeHeroPhotos.edges}
-      /> */}
+
     </main>
   )
 }
