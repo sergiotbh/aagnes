@@ -13,10 +13,11 @@ const AboutPage = () => {
       <div className="md:flex-1 flex items-start justify-end">
         <StaticImage
           src="../images/about_aagnes.jpeg"
-          className="flex-1 2xl:max-w-4xl"
+          className="flex-1 2xl:max-w-4xl max-h-[85vh]"
           layout="fullWidth"
           imgStyle={{
-            objectFit:"contain"
+            objectFit:"cover",
+            objectPosition: "50% 100%"
           }}
         />
       </div>

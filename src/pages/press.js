@@ -30,7 +30,7 @@ const PressPage = ({ data }) => {
 }
 
 const Article = ({ articleData }) => {
-  const { title, year, excerpt, imageSrc, slug, embeddedImages, fullArticle } = articleData
+  const { title, month, year, excerpt, imageSrc, slug, embeddedImages, fullArticle } = articleData
 
   const articleImage = getImage(imageSrc)
 
@@ -52,7 +52,7 @@ const Article = ({ articleData }) => {
           {title}
         </Subtitle>
         <Paragraph customStyle="pb-4">
-          {year}
+          {month}, {year}
         </Paragraph>
         <Subtitle customStyle="text-left pb-4 md:pb-2 2xl:pr-96">
           {`“${excerpt}”`}
@@ -80,6 +80,7 @@ export const query = graphql`
           node {
             frontmatter {
               title
+              month
               year
               slug
               excerpt

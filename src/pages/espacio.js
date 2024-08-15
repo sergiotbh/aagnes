@@ -1,6 +1,5 @@
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import React, { useRef, useState, useEffect, createRef } from "react"
+import React from "react"
 import { Helmet } from "react-helmet"
 import Layout from "../components/Layout"
 import PictureList from "../components/PictureList"
@@ -33,30 +32,30 @@ const EspacioPage = ({ data }) => {
 
 
 export const query = graphql`
-  query{
-    allMdx(
-      filter: {frontmatter: {variant: {eq: "project"}}}
-    ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              year
-              slug
-              excerpt
-              location
-              embeddedImages {
-                childImageSharp {
-                  gatsbyImageData(width: 500)
-                }
-              }
-              variant
+{
+  allMdx(
+    filter: {frontmatter: {variant: {eq: "project"}}}
+    sort: {frontmatter: {year: ASC}}
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          year
+          slug
+          excerpt
+          location
+          embeddedImages {
+            childImageSharp {
+              gatsbyImageData(width: 800)
             }
           }
+          variant
         }
       }
     }
-`
+  }
+}`
 
 EspacioPage.Layout = Layout
 export default EspacioPage;

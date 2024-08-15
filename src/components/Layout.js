@@ -283,7 +283,7 @@ export const query = graphql`
       absolutePath: { glob: "**/src/images/aagnes_meta.png" }
     ) {
       childImageSharp {
-        gatsbyImageData(layout: FIXED, width: 1200)
+        gatsbyImageData(layout: FIXED, width: 792)
       }
     }
     homeHeroPhotos: allFile(
