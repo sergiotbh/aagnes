@@ -52,7 +52,7 @@ export const query = graphql`
         title
         embeddedImages {
           childImageSharp {
-            gatsbyImageData(width: 500)
+            gatsbyImageData(width: 1024)
           }
         }
         title

@@ -54,14 +54,15 @@ const Article = ({ articleData }) => {
         <Paragraph customStyle="pb-4">
           {month}, {year}
         </Paragraph>
-        <Subtitle customStyle="text-left pb-4 md:pb-2 2xl:pr-96">
+        {excerpt && <Subtitle customStyle="text-left pb-4 md:pb-2 2xl:pr-96">
           {`“${excerpt}”`}
-        </Subtitle>
-        {embeddedImages?.length > 0 ? <Link to={`/article/${slug}`}>
-          <SecondaryLink>Ver artículo</SecondaryLink>
-        </Link> :
+        </Subtitle>}
+        {embeddedImages?.length > 0 &&<Link to={`/article/${slug}`}>
+          <SecondaryLink customStyle="pb-1">Ver artículo</SecondaryLink>
+        </Link>}
+        {fullArticle &&
           <a href={fullArticle}>
-            <SecondaryLink>Ver artículo</SecondaryLink>
+            <SecondaryLink>Visitar página del artículo</SecondaryLink>
           </a>}
       </div>
     </div>
