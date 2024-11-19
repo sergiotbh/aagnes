@@ -4,7 +4,7 @@ import { SmallSubtitle, Subtitle } from "../components/TextComponents"
 import { getCurrentIdx, useOnScreen } from "../utils/Generic"
 
 
-const PictureList = ({ projectData }) => {
+const PictureList = ({ projectData }) => {  
   const elRefs = useRef([]);
   const wrapperRef = useRef()
 
@@ -79,9 +79,9 @@ const ProjectSection = ({ projectData, elementId, isOnScreen, innerRef }) => {
       <div
         className={`flex flex-col md:hidden justify-end items-end snap-start`}
       >
-        <Subtitle customStyle={`mb-2 text-left ${isOnScreen ? 'opacity-100' : 'opacity-20'}`}>{projectData.name}</Subtitle>
-        <SmallSubtitle customStyle={`mb-1 transition-opacity duration-500`}>{projectData.location}</SmallSubtitle>
-        <SmallSubtitle customStyle={`mb-1 transition-opacity duration-500`}>{projectData.year}</SmallSubtitle>
+        <Subtitle customStyle={`mb-0.5 text-left`}>{projectData.title}</Subtitle>
+        <SmallSubtitle customStyle={`transition-opacity duration-500`}>{projectData.subtitle}</SmallSubtitle>
+        <SmallSubtitle customStyle={`transition-opacity duration-500`}>{projectData.date}</SmallSubtitle>
       </div>
       {
         projectData.photos?.map((i, n) => <GatsbyImage

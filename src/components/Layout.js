@@ -132,7 +132,7 @@ const Sidebar = ({ initialState, isIndex, location }) => {
   const [copied, setCopied] = useState(false)
   const [contactVisible, setContactVisible] = useState(false)
   const [logoVisible, setLogoVisible] = useState(false)
-  const [isSidebarVisible, setIsSidebarVisible] = useState(isIndex)
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false)
 
   useEffect(() => {
     waitFor(500)

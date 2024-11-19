@@ -53,7 +53,7 @@ const HeroBanner = ({images}) => {
       <div className='absolute h-full w-full'>
         {/* bottom */}
         <div className='absolute h-full'>
-          <GatsbyImage
+          {bottomSrc && <GatsbyImage
             image={bottomSrc}
             loading='eager'
             imgStyle={{
@@ -62,13 +62,13 @@ const HeroBanner = ({images}) => {
             }}
             className="h-full"
             alt=""
-          />
+          />}
         </div>
         {/* top */}
         <div 
           className={`absolute h-full transform ${topVisible ? 'transition-opacity' : 'transition-none'} duration-2000 ${topVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          <GatsbyImage
+          {topSrc && <GatsbyImage
             image={topSrc}
             loading='eager'
             imgStyle={{
@@ -77,7 +77,7 @@ const HeroBanner = ({images}) => {
             }}
             className="h-full"
             alt=""
-          />
+          />}
         </div>
       </div>
     </div>
