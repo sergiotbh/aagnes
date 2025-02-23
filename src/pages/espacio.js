@@ -35,7 +35,7 @@ export const query = graphql`
 {
   allMdx(
     filter: {frontmatter: {variant: {eq: "project"}}}
-    sort: {frontmatter: {year: ASC}}
+    sort: {frontmatter: {year: DESC}}
   ) {
     edges {
       node {
@@ -47,7 +47,7 @@ export const query = graphql`
           location
           embeddedImages {
             childImageSharp {
-              gatsbyImageData(width: 800)
+              gatsbyImageData(width: 2000)
             }
           }
           variant
