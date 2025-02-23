@@ -86,7 +86,7 @@ export const query = graphql`
         }
       }
     }
-    cardFile: file(relativePath: { eq: "business_card.jpg" }) {
+    cardFile: file(relativePath: { eq: "aagnes_card.jpg" }) {
       name
       publicURL
     }

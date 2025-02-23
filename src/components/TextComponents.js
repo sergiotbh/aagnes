@@ -6,8 +6,8 @@ export const PrimaryLink = ({children, selected}) => (
   </h1>
 )
 
-export const SecondaryLink = ({children, selected}) => (
-  <h2 className={`text-xs hover:text-highlight hover:cursor-pointer ${selected ? 'text-highlight' : 'text-black'}`}>
+export const SecondaryLink = ({children, selected, customStyle}) => (
+  <h2 className={`text-xs hover:text-highlight hover:cursor-pointer ${selected ? 'text-highlight' : 'text-black'} ${customStyle}`}>
     {children}
   </h2>
 )

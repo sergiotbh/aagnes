@@ -2,7 +2,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useEffect, useState } from 'react';
 import { waitFor } from '../utils/Generic';
 
-const HeroBanner = ({images, paused}) => {
+const HeroBanner = ({images}) => {
 
   const [currentImage, setCurrentImage] = useState(-1)
 
@@ -10,16 +10,13 @@ const HeroBanner = ({images, paused}) => {
   const [bottomSrc, setBottomSrc] = useState()
   const [topVisible, setTopVisible] = useState(false)
 
-  // const [linksVisible, setLinksVisible] = useState(false)
-  // const [logoVisible, setLogoVisible] = useState(false)
-
   const [copied, setCopied] = useState(false)
   
   const initialLoading = async () => {
     setCurrentImage(currentImage => currentImage >= images.length - 1 ? 0 : currentImage + 1)
 
     setInterval(() => setCurrentImage(currentImage => currentImage >= images.length - 1 ? 0 : currentImage + 1)
-    , 6000);
+    , 4000);
   }
 
   useEffect(() => {
@@ -29,9 +26,9 @@ const HeroBanner = ({images, paused}) => {
   useEffect(() => {
     const setImageSources = async () => {
       setTopSrc(getImage(images[currentImage]?.node.childImageSharp))
-      await waitFor(2500)
+      await waitFor(800)
       setTopVisible(true)
-      await waitFor(2000)
+      await waitFor(1500)
       setBottomSrc(getImage(images[currentImage]?.node.childImageSharp))
     }
 
@@ -56,7 +53,7 @@ const HeroBanner = ({images, paused}) => {
       <div className='absolute h-full w-full'>
         {/* bottom */}
         <div className='absolute h-full'>
-          <GatsbyImage
+          {bottomSrc && <GatsbyImage
             image={bottomSrc}
             loading='eager'
             imgStyle={{
@@ -65,13 +62,13 @@ const HeroBanner = ({images, paused}) => {
             }}
             className="h-full"
             alt=""
-          />
+          />}
         </div>
         {/* top */}
         <div 
           className={`absolute h-full transform ${topVisible ? 'transition-opacity' : 'transition-none'} duration-2000 ${topVisible ? 'opacity-100' : 'opacity-0'}`}
         >
-          <GatsbyImage
+          {topSrc && <GatsbyImage
             image={topSrc}
             loading='eager'
             imgStyle={{
@@ -80,7 +77,7 @@ const HeroBanner = ({images, paused}) => {
             }}
             className="h-full"
             alt=""
-          />
+          />}
         </div>
       </div>
     </div>
