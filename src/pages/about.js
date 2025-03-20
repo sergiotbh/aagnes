@@ -12,7 +12,7 @@ const AboutPage = () => {
       </Helmet>
       <div className="md:flex-1 flex items-start justify-end">
         <StaticImage
-          src="../images/about_aagnes.jpeg"
+          src="../images/about_aagnes.jpg"
           className="flex-1 2xl:max-w-4xl max-h-[85vh]"
           layout="fullWidth"
           imgStyle={{
