@@ -26,7 +26,7 @@ const ArticleDetailPage = ({ data }) => {
         break;
     }
     
-  }, [])
+  }, [data.mdx.frontmatter])
 
   return (
     <Layout>

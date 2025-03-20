@@ -4,6 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Paragraph, SecondaryLink, Subtitle } from '../components/TextComponents';
 import Layout from '../components/Layout'
+import { getFormattedDate } from '../utils/Generic';
 
 const PressPage = ({ data }) => {
   const articles = data.allMdx.edges
@@ -51,8 +52,8 @@ const Article = ({ articleData }) => {
         <Subtitle customStyle="text-left pt-5 md:pt-0">
           {title}
         </Subtitle>
-        <Paragraph customStyle="pb-4">
-          {month}, {year}
+        <Paragraph customStyle="pb-4 capitalize">
+          {getFormattedDate(month, year)}
         </Paragraph>
         {excerpt && <Subtitle customStyle="text-left pb-4 md:pb-2 2xl:pr-96">
           {`“${excerpt}”`}
@@ -76,6 +77,10 @@ export const query = graphql`
   query{
     allMdx(
       filter: {frontmatter: {variant: {eq: "article"}}}
+      sort: [
+        { frontmatter: { year: DESC } }
+        { frontmatter: { month: DESC } }
+      ]
     ) {
         edges {
           node {
