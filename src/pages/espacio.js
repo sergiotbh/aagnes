@@ -35,7 +35,10 @@ export const query = graphql`
 {
   allMdx(
     filter: {frontmatter: {variant: {eq: "project"}}}
-    sort: {frontmatter: {year: DESC}}
+    sort: [
+      { frontmatter: { year: DESC } }
+      { frontmatter: { month: DESC } }
+    ]
   ) {
     edges {
       node {

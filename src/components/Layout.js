@@ -135,7 +135,7 @@ const Sidebar = ({ initialState, isIndex, location }) => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false)
 
   useEffect(() => {
-    waitFor(500)
+    waitFor(30000)
     setLogoVisible(true)
   }, [])
 
@@ -148,7 +148,7 @@ const Sidebar = ({ initialState, isIndex, location }) => {
     if (copied) {
       setTimeout(() => {
         setCopied(false)
-      }, 1500);
+      }, 30000);
     }
   }, [copied])
 
@@ -288,7 +288,7 @@ export const query = graphql`
     }
     homeHeroPhotos: allFile(
       filter: {relativeDirectory: {eq: "homeHeroPhotos"}}
-      sort: { fields: absolutePath, order: ASC }
+      sort: { fields: absolutePath, order: DESC }
     ) {
       edges {
         node {
