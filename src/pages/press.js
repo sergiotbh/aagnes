@@ -32,6 +32,7 @@ const PressPage = ({ data }) => {
 
 const Article = ({ articleData }) => {
   const { title, month, year, excerpt, imageSrc, slug, embeddedImages, fullArticle } = articleData
+  console.log("MONTH", title, month, year);
 
   const articleImage = getImage(imageSrc)
 
@@ -80,6 +81,7 @@ export const query = graphql`
       sort: [
         { frontmatter: { year: DESC } }
         { frontmatter: { month: DESC } }
+        { frontmatter: { index: ASC } }
       ]
     ) {
         edges {

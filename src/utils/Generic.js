@@ -39,7 +39,8 @@ export const useOnScreen = (ref, rootMargin = "0px") => {
 
 export const getCurrentIdx = (id = '0') => +id.match(/\d/g)
 
-export const getFormattedDate = (month, year) => {
-  const mo = (new Date(`${year}-${month}-01`).toLocaleString('es-US',{month:'long'}))
+export const getFormattedDate = (month, year) => {  
+  const date = new Date(year, month - 1, 1);
+  const mo = date.toLocaleString('en-US', {month: 'long'});
   return `${mo}, ${year}`;
 }
