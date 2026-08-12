@@ -65,9 +65,9 @@ const CardPage = ({data}) => {
                 className="w-48 m-2 mb-0 ml-0"
               />
               <div className="flex flex-col font-serif text-xl text-left leading-tight">
-                <span>hola@aagnes.mx</span>
+                <span>hola@aagnes.com</span>
                 <span>@____aagnes</span>
-                <span>aagnes.mx</span>
+                <span>aagnes.com</span>
               </div>
             </div>
           </section>

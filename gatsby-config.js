@@ -3,8 +3,8 @@ module.exports = {
   siteMetadata: {
     title: `Aagnes`,
     description: 'Aagnes es una oficina de diseño, mobiliario e interiores con base en Guadalajara, México.',
-    url: `https://aagnes.mx`,
-    siteUrl: `https://aagnes.mx`,
+    url: `https://aagnes.com`,
+    siteUrl: `https://aagnes.com`,
     image: './src/images/aagnes_meta.png',
     menuLinks: [
       {

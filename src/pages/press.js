@@ -56,7 +56,7 @@ const Article = ({ articleData }) => {
         <Paragraph customStyle="pb-4 capitalize">
           {getFormattedDate(month, year)}
         </Paragraph>
-        {excerpt && <Subtitle customStyle="text-left pb-4 md:pb-2 2xl:pr-96">
+        {excerpt && <Subtitle customStyle="text-left pb-4 md:pb-2 2xl:pr-36">
           {`“${excerpt}”`}
         </Subtitle>}
         {embeddedImages?.length > 0 &&<Link to={`/article/${slug}`}>
@@ -81,7 +81,7 @@ export const query = graphql`
       sort: [
         { frontmatter: { year: DESC } }
         { frontmatter: { month: DESC } }
-        { frontmatter: { index: ASC } }
+        { frontmatter: { index: DESC } }
       ]
     ) {
         edges {
